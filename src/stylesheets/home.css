@@ -79,7 +79,29 @@
     font-size: 32px;
 }
 
+.home_adminbutton{
+    position:absolute;
+    top:30px;
+    left:30px;
+    height: 42px;
+    width: 120px;
+    font-family: "EB garamond";
+    color: whitesmoke;
+   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+    padding: 0;
+    margin: 0;
+    border-radius: 24px;
+    font-size: 16px;
+}
 
+.home_adminbutton:hover {
+    cursor: pointer;
+     transform: scale(1.02); 
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     
+}
 
 
 
