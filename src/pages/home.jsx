@@ -13,7 +13,7 @@ function Home(){
       const navigate = useNavigate();
 
   const handleAdminClick = () => {
-    navigate('/setc@123');
+    navigate('/adminlogin');
   };
 
     return(
