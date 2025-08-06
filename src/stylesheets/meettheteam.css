@@ -1,0 +1,65 @@
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 257px);
+  gap: 100px;
+  justify-content: center;
+  margin: 145px 0;
+}
+
+
+
+
+
+
+.mtt-top{
+  width: 100vw;
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+
+}
+
+.mtt-top_gradient{
+background: linear-gradient(to bottom, #005C79, #ffffff, #ffffff);
+}
+
+.meet{
+  font-family: "Eb garamond";
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.elected{
+  font-family: "EB Garamond";
+  font-style: italic;
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 257px);
+  }
+}
+
+@media (max-width: 720px) {
+  .team-grid {
+    grid-template-columns: 257px;
+  }
+
+  .mtt-top_gradient {
+  background: none;
+}
+
+.mtt-top {
+  color: black;
+  font-size: 20px;
+  background: linear-gradient(to bottom, #005C79, #ffffff);
+  
+}
+
+.team-grid {
+  margin: 100px 0;
+}
+
+
+}

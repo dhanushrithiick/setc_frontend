@@ -1,0 +1,194 @@
+/* Navigation bar */
+.excom_panel_nav {
+  width: 100vw;
+  height: 45vh;
+  padding: 30px 0;
+  background-color: #F08EB1;
+}
+
+.excom_panel_nav_back {
+height: 45px;
+  width: auto;
+  position: absolute;
+  left: 30px;
+  cursor: pointer;
+}
+
+.excom_panel_nav_text {
+  font-size: 32px;
+  font-family: "Eb garamond";
+  color: white;
+  margin-bottom: 75px;
+}
+
+.excom_panel_nav_text1{
+    color: white;
+     font-family: "Eb garamond";
+     font-size: 24px;
+       margin-bottom: 30px;
+
+}
+
+
+.excom_panel_nav_text2{
+color: white;
+     font-family: "Eb garamond";
+     font-size: 20px;
+     margin-bottom: 30px;
+
+}
+
+.excom_panel_nav_button{
+    width: 100px;
+    height: 39px;
+    background-color: white;
+    color: #F08EB1;
+    font-family: "Eb garamond";
+     font-size: 16px;
+     cursor: pointer;
+}
+
+.excom_panel_nav_button:hover {
+  background-color: #EEEEEE;
+}
+
+.excom_panel_nav_content{
+    margin-left: 288px;
+}
+
+
+
+
+.excom_panel_card{
+  display: flex;
+  width: max-content;
+}
+
+.excom_panel_card_container1{
+  width: 257px;
+  height: 343px;
+}
+
+.excom_panel_card_container1 img{
+   width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.excom_panel_card_container2{
+  margin-left: 67px;
+  font-family: "Eb garamond";
+  font-size: 16px;
+  width: 285px;
+}
+
+.excom_card_head{
+  margin-top: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.excom_card_role{
+  font-weight: bold;
+}
+
+
+.excom_panel_card_container_overall{
+  margin-left: 288px;
+  margin-top: 100px;
+}
+
+
+.excom_panel_button{
+  width: 100px;
+    height: 39px;
+    background-color: #F08EB1;
+    color: white;
+    font-family: "Eb garamond";
+     font-size: 16px;
+     cursor: pointer;
+     margin:30px 0 25px 0;
+
+}
+
+.excom_panel_button:hover {
+  background-color: #d07c99;  /* slightly darker blue */
+}
+
+.excom_panel_line{
+  height:1px;
+  width: 100vw;
+  background-color: #ccc;
+  margin: 75px 0 0 0;
+}
+
+
+
+@media (max-width: 1000px) {
+
+.excom_panel_nav_content{
+    margin-left: 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 45px;
+    text-align: center;
+}
+
+
+
+
+.excom_panel_nav_text {
+  font-size: 24px;
+  margin-bottom: 75px;
+}
+
+.excom_panel_nav_text1{
+     font-size: 20px;
+       margin-bottom: 30px;
+
+}
+
+
+.excom_panel_nav_text2{
+     font-size: 16px;
+     margin-bottom: 30px;
+
+}
+
+.excom_panel_nav_back {
+  left: 20px;
+  height: 30px;
+}
+
+.excom_panel_card{
+  display:block;
+  
+}
+
+.excom_panel_card_container2{
+  margin-left: 0;
+  max-width: 270px;
+}
+
+.excom_panel_card_container_overall{
+  margin: 75px 0 0 0;
+  width: 100vw;
+  display: flex;
+  padding: 0 30px;
+  justify-content: center;
+}
+
+.excom_card_role{
+  margin-top: 30px;
+}
+
+.excom_card_head{
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+}

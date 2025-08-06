@@ -1,0 +1,149 @@
+.contact_container {
+  width: 100vw;
+  height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact_container_1 {
+  width: 50vw;
+
+}
+
+.contact_container_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.contact_container_2 {
+  width: 50vw;
+  padding: 40px 40px 0 40px;
+  box-sizing: border-box;
+    font-family: "Eb garamond";
+}
+
+.contact_title1 {
+  font-size: 32px;
+  padding-bottom: 15px;
+}
+
+.contact_title2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group label {
+  font-family: "Eb garamond";
+  margin-bottom: 5px;
+  margin-top: 16px;
+  font-size: 20px;
+  color: #333333;
+}
+
+.form_group span {
+  color: #FF0400;
+  margin-left: 4px;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.contact_form input {
+  height: 40px;
+}
+
+.contact_form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.char_count {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.contact_form button {
+  width: 75px;
+  min-width: 75px;
+  height: 40px;
+  font-weight: bold;
+  background-color: #EEEEEE;
+  color: #33383E;
+  font-size: 16px;
+  border: 1px solid #DDDDDD;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Eb garamond";
+}
+
+.contact_form button:hover {
+  background-color: #CCCCCC;
+}
+
+@media (max-width: 768px) {
+
+  
+.contact_title1 {
+  font-size: 24px;
+}
+
+.contact_title2 {
+  font-size: 18px;
+}
+
+    .contact_container {
+    height: auto;
+    flex-direction: column;
+}
+
+.contact_container_1 {
+  height: 40vh;
+  width: 100vw;
+}
+
+.contact_container_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.contact_container_2 {
+  width: 100vw;
+  padding: 30px 30px 0px 30px;
+}
+
+
+.contact_form textarea {
+  height: 220px;
+}
+
+.contact_form button {
+  margin: 20px 0 60px 0;
+}
+
+}
+

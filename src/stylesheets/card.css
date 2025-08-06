@@ -1,0 +1,37 @@
+.card_container{
+    width: 257px;
+    font-family: "Eb garamond";  
+    
+}
+
+.card_name{
+margin-top: 10px;
+ font-size: 20px;
+
+}
+
+.card_image {
+  width: 257px;        /* or 100% if you want to fill container width */
+  height: 343px;       /* same as width to make it square */
+  object-fit: cover;   /* this makes sure it fills the box and crops as needed */
+}
+
+.card_post{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.card_speaksAbout{
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+
+.card_enjoys{
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+@media (max-width: 720px) {
+    
+}

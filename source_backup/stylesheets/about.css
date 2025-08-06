@@ -1,0 +1,179 @@
+.about-hs_container{
+    min-height: 60vh;
+    background: rgba(0, 0, 0, 0.5) url("/images/achievements_bg.png");
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position:right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px 0 30px;
+    margin:0;
+}
+
+
+.about-hs_tm_logo{
+    max-width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.about-hs_club_name{
+    font-size: 32px;
+    color: white;
+    font-family: "Eb garamond";
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.about-hs_dda{
+    font-size: 17px;
+    color: white;
+    font-family:"Eb garamond";
+    text-align: center;
+    margin: 0;
+    padding: 8px 0 0 0;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 53px 90px 53px;
+    margin: 0;
+    font-family: "Eb garamond";
+}
+
+.about-container1{
+    min-width: 310px;
+    font-size: 20px;
+}
+
+.about-container2{
+    max-width: 879px;
+    font-size: 20px;
+}
+
+
+
+
+@media screen and (max-width: 952px) {
+    .about-container{
+        display: block;
+        padding: 45px 30px 75px 30px;
+    }
+
+    .about-container1{
+        min-width: 0px;
+        font-size: 24px;
+        padding-bottom: 30px;
+    }
+
+}
+@media screen and (max-width: 834px) {
+
+    .about-hs_tm_logo{
+        max-width: 100px;
+    }
+
+    .about-hs_club_name{
+        font-size: 24px;
+    }
+    
+    .about-hs_dda{
+        font-size: 14px;
+    }
+
+    
+    .about-container2{
+        font-size: 16px;
+    }
+
+  
+    .about-container2_tm_gl{
+        font-size: 12px;
+    }
+
+}
+
+.about-achievements_container1 {
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 0 20px;
+  margin: 60px 0 80px 0 ;
+    font-family: "Eb garamond";
+}
+
+.about_achievements_title {
+   font-family: "Eb garamond";
+  color: black;
+  font-size: 32px;
+  margin: 0;
+}
+
+.about_achievements_desc {
+   font-family:  "Eb garamond";
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+}
+
+@media (max-width: 480px) {
+
+  .about_achievements_title {
+    font-size: 24px;
+  }
+
+  .about_achievements_desc {
+    font-size: 16px;
+  }
+}
+
+.about_achievements_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 257px);
+  gap: 93px;
+  justify-content: center;
+}
+
+.achievement_card {
+  text-align: center;
+  font-family: "Eb garamond";
+}
+
+.achievement_image {
+  width: 337px;
+  height: 367px;
+  object-fit: cover;
+  border-radius: 3px; /* optional: to slightly round the image corners */
+}
+
+.achievement_text {
+  font-size: 16px;
+  font-family: "Eb garamond";
+  margin-top: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about_achievements_grid {
+    grid-template-columns: repeat(2, 257px);
+  }
+}
+
+@media (max-width: 720px) {
+  .about_achievements_grid {
+    grid-template-columns: 257px;
+  }
+}
+
+.about-achievements_container2{
+    margin-bottom: 100px;
+}
