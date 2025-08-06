@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../stylesheets/about.css';
-import Line from '../components/Line.jsx';
+import Line from '../components/line.jsx';
 import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
 
