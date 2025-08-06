@@ -4,12 +4,17 @@ import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
 import Line from '../components/line.jsx';
 
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Home(){
 
-      
+      const navigate = useNavigate();
+
+  const handleAdminClick = () => {
+    navigate('/setc@123');
+  };
 
     return(
         <>
@@ -20,6 +25,9 @@ function Home(){
 
 
         
+                     <button className='home_adminbutton' onClick={handleAdminClick}>
+                           Admin Access
+                        </button>
                     
 
 
