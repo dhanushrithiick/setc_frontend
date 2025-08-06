@@ -2,7 +2,7 @@ import Testimonial from '../components/Testimonial';
 import '../stylesheets/home.css';
 import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
-import Line from '../components/Line.jsx';
+import Line from '../components/line.jsx';
 
 
 
