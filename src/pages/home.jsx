@@ -54,7 +54,7 @@ function Home(){
                 <div className="home-welcome_message">
                     <p>Speak. Lead. Inspire.</p><br/>
 
-                    <p className='home-wm_highlight'>Welcome to Sri Eshwar Toastmasters,</p><br/>
+                    <p className='home-wm_highlight'>Welcome to Sri Eshwar Toastmasters Club,</p><br/>
 
                     <p>Public speaking can feel overwhelming, right??? Your palms sweat, your mind races, and suddenly,
                     finding the right words feels impossible. Or maybe you’re already comfortable speaking but want to truly
