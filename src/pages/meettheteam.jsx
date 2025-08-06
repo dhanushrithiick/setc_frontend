@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../stylesheets/meettheteam.css';
 import Card from '../components/card';
-import Line from '../components/Line';
+import Line from '../components/line';
 import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
 
