@@ -30,7 +30,7 @@ function App() {
         <Route path='/meettheteam' element={<Meettheteam />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/manage-site' element={<Admin />} />
-        <Route path='/setc123' element={<Adminlogin />} />
+        <Route path='/admin-login' element={<Adminlogin />} />
         <Route path='/excompanel' element={<ExcomPanel/>} />
         <Route path='/messagespanel' element={<MessagesPanel/>} />
         <Route path='/testimonialpanel' element={<TestimonialsPanel />} />
