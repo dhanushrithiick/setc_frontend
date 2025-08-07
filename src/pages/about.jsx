@@ -21,7 +21,7 @@ const About = () => {
         <br /><br />
         <img src="/images/tm_logo.png" className='about-hs_tm_logo' />
         <p className='about-hs_club_name'>Sri Eshwar Toastmasters Club</p>
-        /*<p className='about-hs_dda'>Division H | District 120 | Area H4</p>*/
+        <p className='about-hs_dda'>Division H | District 120</p>
       </div>
 
       <div className="about-container">
