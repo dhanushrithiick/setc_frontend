@@ -5,13 +5,39 @@ import '../stylesheets/InfiniteMovingCards.css';
 function App() {
   const [testimonials, setTestimonials] = useState([]);
 
+  const CACHE_KEY = "testimonials";
+  const CACHE_TIME_KEY = "testimonials_time";
+  const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+
+  const fetchTestimonials = async () => {
+    try {
+      const res = await fetch("https://setc-backend.onrender.com/testimonial");
+      const data = await res.json();
+
+      const cached = localStorage.getItem(CACHE_KEY);
+      const cachedData = cached ? JSON.parse(cached) : null;
+
+      if (!cachedData || JSON.stringify(cachedData) !== JSON.stringify(data)) {
+        localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+        localStorage.setItem(CACHE_TIME_KEY, Date.now());
+        setTestimonials(data);
+      }
+    } catch (error) {
+      console.error("Error fetching testimonials:", error);
+    }
+  };
+
   useEffect(() => {
-    fetch("https://setc-backend.onrender.com/testimonial")
-      .then((res) => res.json())
-      .then((data) => setTestimonials(data))
-      .catch((error) => {
-        console.error("Error fetching testimonials:", error);
-      });
+    const cached = localStorage.getItem(CACHE_KEY);
+    const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
+
+    const isFresh = cachedTime && (Date.now() - cachedTime < CACHE_DURATION);
+
+    if (cached && isFresh) {
+      setTestimonials(JSON.parse(cached));
+    } else {
+      fetchTestimonials();
+    }
   }, []);
 
   return (
