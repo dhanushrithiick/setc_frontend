@@ -59,7 +59,7 @@ const UpdateExcom= () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`https://setc-backend.onrender.com/${member._id}`, {
+      const res = await fetch(`https://setc-backend.onrender.com/excom/${member._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
