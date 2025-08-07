@@ -21,7 +21,7 @@ const About = () => {
         <br /><br />
         <img src="/images/tm_logo.png" className='about-hs_tm_logo' />
         <p className='about-hs_club_name'>Sri Eshwar Toastmasters Club</p>
-        <p className='about-hs_dda'>Division H | District 120 | Area H4</p>
+        /*<p className='about-hs_dda'>Division H | District 120 | Area H4</p>*/
       </div>
 
       <div className="about-container">
@@ -67,7 +67,11 @@ const About = () => {
           <p>In time, the club's influence expanded, and it transitioned to District 120 - Area B5, further broadening its reach and
             opportunities. Today, Sri Eshwar Toastmasters Club proudly boasts an active membership of 31 dedicated individuals,
             continuing to uphold its tradition of excellence through enthusiastic participation in weekly meetings, contests, and special
-            events.</p>
+            events.</p><br />
+
+           <p>Owing to the continued success and thriving community of Club 1, the Sri Eshwar Toastmasters Club – Chapter 2 was officially chartered on
+            August 9, 2025. This new chapter stands as a testament to the club’s growth and its ongoing commitment to shaping confident speakers and leaders 
+            within the Sri Eshwar campus.</p><br />
         </div>
       </div>
 
