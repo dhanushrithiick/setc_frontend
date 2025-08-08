@@ -7,37 +7,30 @@ function App() {
 
   const CACHE_KEY = "testimonials";
   const CACHE_TIME_KEY = "testimonials_time";
-  const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
 
   const fetchTestimonials = async () => {
     try {
       const res = await fetch("https://setc-backend.onrender.com/testimonial");
       const data = await res.json();
 
-      const cached = localStorage.getItem(CACHE_KEY);
-      const cachedData = cached ? JSON.parse(cached) : null;
-
-      if (!cachedData || JSON.stringify(cachedData) !== JSON.stringify(data)) {
-        localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-        localStorage.setItem(CACHE_TIME_KEY, Date.now());
-        setTestimonials(data);
-      }
+      // Update cache and state with latest data
+      localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+      localStorage.setItem(CACHE_TIME_KEY, Date.now());
+      setTestimonials(data);
     } catch (error) {
       console.error("Error fetching testimonials:", error);
     }
   };
 
   useEffect(() => {
+    // Show cached data instantly if available
     const cached = localStorage.getItem(CACHE_KEY);
-    const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
-
-    const isFresh = cachedTime && (Date.now() - cachedTime < CACHE_DURATION);
-
-    if (cached && isFresh) {
+    if (cached) {
       setTestimonials(JSON.parse(cached));
-    } else {
-      fetchTestimonials();
     }
+
+    // Always fetch fresh data on reload
+    fetchTestimonials();
   }, []);
 
   return (
