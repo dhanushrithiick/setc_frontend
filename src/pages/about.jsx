@@ -84,8 +84,8 @@ const About = () => {
             the groundwork was laid for a culture of collaboration, learning, and excellence. Weekly meetings became a space where members
             could challenge themselves, overcome their fears, and refine their skills.</p><br />
 
-          <p>In time, the club's influence expanded, and it transitioned to District 120 - Area B5, further broadening its reach and
-            opportunities. Today, Sri Eshwar Toastmasters Club proudly boasts an active membership of 31 dedicated individuals,
+          <p>In time, the club's influence expanded, and it transitioned to District 120 - Area H4, further broadening its reach and
+            opportunities. Today, Sri Eshwar Toastmasters Club proudly boasts an active membership of 26 dedicated individuals,
             continuing to uphold its tradition of excellence through enthusiastic participation in weekly meetings, contests, and special
             events.</p><br />
 
