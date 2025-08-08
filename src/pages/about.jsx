@@ -108,7 +108,7 @@ const About = () => {
               achievements.map((item, index) => (
                 <div key={index} className="achievement_card">
                   <img src={item.imageUrl} alt={item.name} className="achievement_image" />
-                  <p className='achievement_text'>{item.name}<br />({item.years})</p>
+                  <p className='achievement_text'>{item.name}<br />{item.years}</p>
                 </div>
               ))
             ) : (
