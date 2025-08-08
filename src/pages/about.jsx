@@ -4,24 +4,44 @@ import Line from '../components/line.jsx';
 import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
 
+// Cache helpers
+const getCache = (key) => {
+  const data = localStorage.getItem(key);
+  return data ? JSON.parse(data) : null;
+};
+const setCache = (key, data) => {
+  localStorage.setItem(key, JSON.stringify(data));
+  localStorage.setItem(`${key}_time`, Date.now());
+};
+
 const About = () => {
   const [achievements, setAchievements] = useState([]);
 
   useEffect(() => {
+    // Show cached achievements instantly
+    const cached = getCache('achievements');
+    if (cached) setAchievements(cached);
+
+    // Always fetch latest achievements
     fetch("https://setc-backend.onrender.com/achievement")
       .then((res) => res.json())
-      .then((data) => setAchievements(data))
+      .then((data) => {
+        if (JSON.stringify(data) !== JSON.stringify(cached)) {
+          setAchievements(data);
+          setCache('achievements', data);
+        }
+      })
       .catch((err) => console.error("Error fetching achievements:", err));
   }, []);
 
   return (
     <>
-    <Nav/>
+      <Nav />
       <div className='about-hs_container'>
         <br /><br />
         <img src="/images/tm_logo.png" className='about-hs_tm_logo' />
         <p className='about-hs_club_name'>Sri Eshwar Toastmasters Club</p>
-        <p className='about-hs_dda'>Division H | District 120</p>
+        <p className='about-hs_dda'>Division H | District 120 | Area H4</p>
       </div>
 
       <div className="about-container">
@@ -69,7 +89,7 @@ const About = () => {
             continuing to uphold its tradition of excellence through enthusiastic participation in weekly meetings, contests, and special
             events.</p><br />
 
-           <p>Owing to the continued success and thriving community of Club 1, the Sri Eshwar Toastmasters Club – Chapter 2 was officially chartered on
+          <p>Owing to the continued success and thriving community of Sri Eshwar Toastmasters Club, the Sri Eshwar Toastmasters Club – Chapter 2 was officially chartered on
             August 9, 2025. This new chapter stands as a testament to the club’s growth and its ongoing commitment to shaping confident speakers and leaders 
             within the Sri Eshwar campus.</p><br />
         </div>
@@ -97,7 +117,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
