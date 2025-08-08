@@ -5,14 +5,10 @@ import Line from '../components/line';
 import Nav from '../components/nav.jsx';
 import Footer from '../components/footer.jsx';
 
-const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours
+// Cache helpers
 const getCache = (key) => {
   const data = localStorage.getItem(key);
-  const time = localStorage.getItem(`${key}_time`);
-  if (data && time && Date.now() - time < CACHE_DURATION) {
-    return JSON.parse(data);
-  }
-  return null;
+  return data ? JSON.parse(data) : null;
 };
 const setCache = (key, data) => {
   localStorage.setItem(key, JSON.stringify(data));
@@ -26,11 +22,11 @@ const Meettheteam = () => {
   const [period, setPeriod] = useState(null);
 
   useEffect(() => {
-    // Try cached period
+    // Show cached period instantly if available
     const cachedPeriod = getCache('excom-period');
     if (cachedPeriod) setPeriod(cachedPeriod);
 
-    // Try cached excom
+    // Show cached excom instantly if available
     const cachedExcom = getCache('excom');
     if (cachedExcom) {
       setRow1(cachedExcom.slice(0, 3));
@@ -38,24 +34,22 @@ const Meettheteam = () => {
       setRow3(cachedExcom.slice(6, 8));
     }
 
-    // Fetch latest period
+    // Always fetch latest period
     fetch('https://setc-backend.onrender.com/excom-period')
       .then(res => res.json())
       .then(data => {
-        const isDifferent = JSON.stringify(data) !== JSON.stringify(cachedPeriod);
-        if (isDifferent) {
+        if (JSON.stringify(data) !== JSON.stringify(cachedPeriod)) {
           setPeriod(data);
           setCache('excom-period', data);
         }
       })
       .catch(err => console.error("Error fetching period:", err));
 
-    // Fetch latest excom
+    // Always fetch latest excom
     fetch('https://setc-backend.onrender.com/excom')
       .then(res => res.json())
       .then(data => {
-        const isDifferent = JSON.stringify(data) !== JSON.stringify(cachedExcom);
-        if (isDifferent) {
+        if (JSON.stringify(data) !== JSON.stringify(cachedExcom)) {
           setRow1(data.slice(0, 3));
           setRow2(data.slice(3, 6));
           setRow3(data.slice(6, 8));
