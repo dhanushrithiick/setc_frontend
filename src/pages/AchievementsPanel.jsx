@@ -25,7 +25,7 @@ const AchievementsPanel = () => {
 
 const handleDelete = async (id) => {
   try {
-    const response = await fetch(`https://setc-backend.onrender.com/${id}`, {
+    const response = await fetch(`https://setc-backend.onrender.com/achievement/${id}`, {
       method: 'DELETE',
     });
 
