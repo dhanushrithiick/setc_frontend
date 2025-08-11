@@ -53,7 +53,7 @@ function App() {
             speed="normal"
           />
         ) : (
-          <p>Loading testimonials...</p>
+          <p className="testimonial_loading_text">Loading testimonials...</p>
         )}
       </div>
     </div>
