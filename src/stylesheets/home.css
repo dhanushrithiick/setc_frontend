@@ -1,8 +1,8 @@
 .home-hero_section_container{
     min-height: 100vh;
     background: 
-        linear-gradient(to top, black 0%, rgba(0, 0, 0,.5) 100%), 
-        url("/images/SEC05800.jpg");
+       background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 100%), 
+            url("/images/SEC05800.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
