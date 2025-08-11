@@ -2,8 +2,8 @@
     min-height: 100vh;
     background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.9) 0%,      /* bottom slightly dark */
-    rgba(0, 0, 0, 0.4) 50%,     /* keep same darkness halfway */
+    rgba(0, 0, 0, 1) 0%,      /* bottom slightly dark */
+    rgba(0, 0, 0, 0.5) 50%,     /* keep same darkness halfway */
     rgba(0, 0, 0, 0) 100%       /* fully transparent at top */
   ),
   url("/images/SEC05800.jpg");
