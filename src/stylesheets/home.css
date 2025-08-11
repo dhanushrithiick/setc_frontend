@@ -1,7 +1,12 @@
 .home-hero_section_container{
     min-height: 100vh;
-       background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 100%), 
-            url("/images/SEC05800.jpg");
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,      /* bottom slightly dark */
+    rgba(0, 0, 0, 0.4) 50%,     /* keep same darkness halfway */
+    rgba(0, 0, 0, 0) 100%       /* fully transparent at top */
+  ),
+  url("/images/SEC05800.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
