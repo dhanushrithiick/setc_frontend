@@ -25,7 +25,7 @@ function Home(){
 
                 <div className="home-hero_section">
                      
-                    <img src="/images/tm_logo.png" className="home-hero_section_tm_logo" />
+                   /* <img src="/images/tm_logo.png" className="home-hero_section_tm_logo" />*/
                     <div className='home-tagline'>
                         <div>
                             <p>100 years of &nbsp;</p>
