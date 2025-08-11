@@ -1,4 +1,3 @@
-/* InfiniteMovingCards.css */
 
 .scroller {
   position: relative;
@@ -7,6 +6,11 @@
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+}
+
+
+.testimonial_loading_text{ 
+  text-align: center;
 }
 
 .scroller ul {
